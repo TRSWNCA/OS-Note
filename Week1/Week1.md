@@ -101,7 +101,19 @@ $ sudo apt install gcc-8-riscv64-linux-gnu
 $ sudo update-alternatives --install /usr/bin/riscv64-linux-gnu-gcc riscv64-linux-gnu-gcc /usr/bin/riscv64-linux-gnu-gcc-8 1
 ```
 
+Moreover my qemu not installed:
 
+```bash
+$ sudo apt install libsdl1.2-dev
+$ sudo apt install libtool-bin
+$ sudo apt install libglib2.0-dev
+$ sudo apt install libz-dev
+$ sudo apt install libpixman-1-dev
+$ git clone https://github.com/mit-pdos/6.828-qemu --depth=1 ~/qemu && cd ~/qemu
+$ ./configure --disable-kvm --disable-werror --target-list="i386-softmmu x86_64-softmmu"
+```
+
+And then
 
   
 
