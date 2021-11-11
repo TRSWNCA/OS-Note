@@ -37,7 +37,7 @@ int main() {
         Psem(chopsticks_sem_id[i]);
         printf("Philopher %d pick up left chopstick\n", i);
         /* 哲学家拿起右边的筷子 */
-        Psem(chopsticks_sem_id[(i+1)%5]);
+        Psem(chopsticks_sem_id[(i + 1) % 5]);
         printf("Philopher %d pick up right chopstick\n", i);
         /* 哲学家开始吃饭 */
         printf("Philopher %d begins to eat!\n", i);
@@ -45,7 +45,7 @@ int main() {
         /* 哲学家吃饭完毕 */
         printf("Philopher %d ends to eat!\n", i);
         /* 哲学家放下右边的筷子 */
-        Vsem(chopsticks_sem_id[(i+1)%5]);
+        Vsem(chopsticks_sem_id[(i + 1) % 5]);
         printf("Philopher %d put down right chopstick\n", i);
         /* 哲学家放下左边的筷子 */
         Vsem(chopsticks_sem_id[i]);
